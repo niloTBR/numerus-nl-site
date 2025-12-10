@@ -29,19 +29,11 @@ const PartnersPage = () => {
     <div className={styles.partnersPage}>
       <PageHeader 
         title="Our Partners" 
-        subtitle="Working with global leaders to deliver excellence in Iraq"
+        subtitle="Partnerships enable us to bring international best practices and cutting-edge solutions to the Iraqi market"
       />
       
       <section className={styles.partnersSection}>
         <div className="container">
-          <div className={styles.introContent}>
-            <p className={styles.introText}>
-              Over two decades, Numerus Group has built strategic partnerships with the world's leading 
-              companies across energy, infrastructure, technology, and industrial sectors. These partnerships 
-              enable us to bring international best practices and cutting-edge solutions to the Iraqi market.
-            </p>
-          </div>
-          
           <div className={styles.partnersGrid}>
             {partners.map((partner, index) => (
               <div key={index} className={styles.partnerCard}>

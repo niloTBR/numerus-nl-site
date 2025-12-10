@@ -11,14 +11,6 @@ const AboutPage = () => {
     { title: 'Deliver Value', description: 'Creating lasting impact for stakeholders' }
   ];
 
-  const principles = [
-    { number: '1', label: 'Integrity', description: 'Unwavering commitment to ethical business practices' },
-    { number: '2', label: 'Excellence', description: 'Pursuing the highest standards in all operations' },
-    { number: '3', label: 'Differentiation', description: 'Creating unique value propositions in the market' },
-    { number: '4', label: 'Mutuality', description: 'Building win-win partnerships for sustainable growth' },
-    { number: '5', label: 'Teamwork', description: 'Leveraging collective strength for greater impact' },
-    { number: '6', label: 'Passion', description: 'Bringing energy and commitment to every project' }
-  ];
 
   return (
     <div className={styles.aboutPage}>
@@ -41,47 +33,35 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className={styles.missionSection}>
+      {/* Mission & Vision Section */}
+      <section className={styles.missionVisionSection}>
+        <div className={styles.parallaxBg}></div>
         <div className="container">
-          <div className={styles.missionContent}>
-            <h2 className={styles.missionTitle}>OUR MISSION</h2>
-            <p className={styles.missionStatement}>
-              To apply our experience in identifying and developing 
-              profitable and sustainable business in Iraq.
-            </p>
-            <p className={styles.missionSubtext}>
-              In doing so we rely on four driving principals:
-            </p>
+          <div className={styles.missionVisionGrid}>
+            <div className={styles.missionContent}>
+              <h2 className={styles.sectionLabel}>OUR MISSION</h2>
+              <p className={styles.statementText}>
+                To apply our experience in identifying and developing 
+                profitable and sustainable business in Iraq.
+              </p>
+            </div>
+            <div className={styles.visionContent}>
+              <h2 className={styles.sectionLabel}>OUR VISION</h2>
+              <p className={styles.statementText}>
+                To be the leading enabler of sustainable business growth in Iraq, 
+                bridging international excellence with local opportunity.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Principles Grid Section */}
-      <section className={styles.principlesSection}>
-        <div className="container">
-          <div className={styles.principlesGrid}>
-            {principles.map((principle, index) => (
-              <div key={index} className={styles.principleCard}>
-                <div className={styles.principleNumber}>{principle.number}</div>
-                <h3 className={styles.principleLabel}>{principle.label}</h3>
-                <p className={styles.principleDescription}>{principle.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Corporate Culture Section */}
       <section className={styles.cultureSection}>
         <div className="container">
           <div className={styles.cultureHeader}>
-            <h2 className={styles.cultureTitle}>
-              Numerus strives to develop a <span>Corporate Culture</span> in its operations...
-            </h2>
-            <p className={styles.cultureSubtitle}>
-              ...built on the following Corporate Values
-            </p>
+            <h2 className={styles.cultureTitle}>CORPORATE CULTURE</h2>
           </div>
           
           <div className={styles.valuesGrid}>
@@ -98,16 +78,75 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Timeline Section */}
+      <section className={styles.timelineSection}>
+        <div className="container">
+          <div className={styles.timelineHeader}>
+            <h2 className={styles.timelineTitle}>OUR JOURNEY</h2>
+          </div>
+          <div className={styles.timelineContainer}>
+            <div className={styles.timelineLine}></div>
+            <div className={styles.timelineEvents}>
+              <div className={styles.timelineEvent}>
+                <div className={styles.timelineYear}>2000</div>
+                <div className={styles.timelineContent}>
+                  <h3>Foundation</h3>
+                  <p>Established operations in Baghdad, beginning our journey in Iraq's emerging market</p>
+                </div>
+              </div>
+              <div className={styles.timelineEvent}>
+                <div className={styles.timelineYear}>2005</div>
+                <div className={styles.timelineContent}>
+                  <h3>Expansion</h3>
+                  <p>Expanded operations to Basra and Erbil, establishing nationwide presence</p>
+                </div>
+              </div>
+              <div className={styles.timelineEvent}>
+                <div className={styles.timelineYear}>2010</div>
+                <div className={styles.timelineContent}>
+                  <h3>Strategic Partnerships</h3>
+                  <p>Formed key alliances with international corporations entering Iraqi market</p>
+                </div>
+              </div>
+              <div className={styles.timelineEvent}>
+                <div className={styles.timelineYear}>2015</div>
+                <div className={styles.timelineContent}>
+                  <h3>Sector Diversification</h3>
+                  <p>Expanded into automotive and logistics sectors alongside energy operations</p>
+                </div>
+              </div>
+              <div className={styles.timelineEvent}>
+                <div className={styles.timelineYear}>2020</div>
+                <div className={styles.timelineContent}>
+                  <h3>Regional Leadership</h3>
+                  <p>Established presence in UAE, becoming a regional business enabler</p>
+                </div>
+              </div>
+              <div className={styles.timelineEvent}>
+                <div className={styles.timelineYear}>2024</div>
+                <div className={styles.timelineContent}>
+                  <h3>Future Forward</h3>
+                  <p>Continuing to bridge international excellence with local opportunity</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className={styles.ctaSection}>
-        <div className="container">
-          <div className={styles.ctaContent}>
-            <h2>Ready to Partner with Excellence?</h2>
-            <p>Discover how our values translate into success for your business.</p>
-            <a href="/contact" className={styles.ctaButton}>
-              Get Started
-              <ArrowRight size={16} strokeWidth={1.5} />
-            </a>
+        <div className={styles.ctaBackground}>
+          <div className={styles.ctaOverlay}></div>
+          <div className="container">
+            <div className={styles.ctaContent}>
+              <h2 className={styles.ctaTitle}>Ready to Enter the Iraqi Market?</h2>
+              <p className={styles.ctaSubtitle}>Let's discuss how we can help you succeed</p>
+              <a href="/contact" className={styles.ctaButton}>
+                Get Started
+                <ArrowRight size={16} strokeWidth={1.5} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
