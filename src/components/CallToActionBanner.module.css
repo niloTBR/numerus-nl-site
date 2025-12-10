@@ -1,0 +1,133 @@
+.ctaBanner {
+  position: relative;
+  padding: var(--space-4xl) 0;
+  overflow: hidden;
+}
+
+.ctaBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/footer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.ctaBackground::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(22, 27, 82, 0.9);
+  z-index: 1;
+}
+
+.ctaPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      transparent, 
+      transparent 35px, 
+      rgba(255, 255, 255, 0.1) 35px, 
+      rgba(255, 255, 255, 0.1) 70px
+    );
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInScale 0.8s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ctaTitle {
+  color: white;
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+  font-weight: 400;
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-lg);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ctaSubtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  background-color: transparent;
+  color: white;
+  padding: var(--space-sm) var(--space-xl);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid white;
+  border-radius: 0;
+  transition: all var(--transition-base);
+}
+
+.ctaButton:hover {
+  background-color: white;
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.ctaButton:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .ctaBanner {
+    padding: var(--space-3xl) 0;
+  }
+
+  .ctaTitle {
+    font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-3xl));
+  }
+
+  .ctaSubtitle {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaBanner {
+    padding: var(--space-2xl) 0;
+  }
+
+  .ctaButton {
+    width: 100%;
+    padding: var(--space-md) var(--space-xl);
+  }
+}

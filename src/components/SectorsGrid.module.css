@@ -1,0 +1,236 @@
+.sectorsSection {
+  background-color: var(--color-muted);
+}
+
+.sectionTitle {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-3xl);
+  width: 100%;
+}
+
+.sectorsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.sectorCard {
+  background-color: white;
+  border-radius: 0;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.sectorCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sectorCard:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform var(--transition-slow);
+}
+
+.sectorCard:hover .imagePlaceholder {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 72, 148, 0.8) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--space-lg);
+}
+
+.sectorCard:hover .cardOverlay {
+  opacity: 1;
+}
+
+.exploreText {
+  color: white;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cardContent {
+  padding: var(--space-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.cardCompany {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+}
+
+.cardDescription {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-lg);
+  flex: 1;
+}
+
+.cardLink {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: gap var(--transition-base);
+}
+
+.sectorCard:hover .cardLink {
+  gap: var(--space-sm);
+}
+
+.cardLink svg {
+  transition: transform var(--transition-base);
+}
+
+.sectorCard:hover .cardLink svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 968px) {
+  .sectorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Carousel Styles */
+.mobileCarousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselContainer {
+  overflow: hidden;
+  width: 100%;
+  touch-action: pan-y;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.carouselCard {
+  min-width: 100%;
+  background-color: white;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.carouselCard .cardImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.carouselCard .cardContent {
+  padding: var(--space-lg);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+  padding-bottom: var(--space-sm);
+}
+
+.paginationDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  padding: 0;
+}
+
+.paginationDot.active {
+  background-color: var(--color-primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.paginationDot:hover {
+  background-color: var(--color-primary-light);
+}
+
+@media (max-width: 968px) {
+  .sectorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sectorsGrid {
+    display: none;
+  }
+
+  .mobileCarousel {
+    display: block;
+  }
+
+  .sectorCard:hover {
+    transform: none;
+  }
+}
