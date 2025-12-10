@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import styles from './AboutPage.module.css';
 
@@ -29,6 +30,28 @@ const AboutPage = () => {
               generations and is deeply rooted in a tradition of excellence, diligence and creativity 
               coupled with an unbending ethic of fairness and responsibility.
             </p>
+          </div>
+          
+          {/* Company Logos Grid */}
+          <div className={styles.companiesGrid}>
+            <Link to="/sectors/logistics" className={styles.companyCard}>
+              <div className={styles.companyLogoWrapper}>
+                <img src="/estilam-logo.png" alt="Al-Estilam" className={styles.companyLogoImg} />
+              </div>
+              <p className={styles.companySector}>Logistics</p>
+            </Link>
+            <Link to="/sectors/automotive" className={styles.companyCard}>
+              <div className={styles.companyLogoWrapper}>
+                <div className={styles.leadingStarLogo}>LEADING STAR</div>
+              </div>
+              <p className={styles.companySector}>Automotive</p>
+            </Link>
+            <Link to="/sectors/oil-gas" className={styles.companyCard}>
+              <div className={styles.companyLogoWrapper}>
+                <img src="/agos-logo.jpg" alt="Al-Gharraf" className={styles.companyLogoImg} />
+              </div>
+              <p className={styles.companySector}>Oil & Gas</p>
+            </Link>
           </div>
         </div>
       </section>

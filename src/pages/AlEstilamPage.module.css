@@ -1,0 +1,663 @@
+.alEstilamPage {
+  min-height: 100vh;
+}
+
+/* Introduction Section */
+.introSection {
+  padding: 10rem 0;
+  background: white;
+}
+
+.introContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #161B52;
+  margin-bottom: 1rem;
+}
+
+.introText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Partnership Section */
+.partnershipSection {
+  padding: 2rem 0 6rem 0;
+  background: white;
+}
+
+.partnershipHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.partnersGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.partnerCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.partnerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #161B52;
+}
+
+.partnerLogoWrapper {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partnerLogo {
+  font-family: 'Barlow', 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #161B52;
+}
+
+.partnerLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #161B52 0%, #1e3a5f 100%);
+}
+
+.servicesHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.servicesSection .sectionTitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background: white;
+  padding: 3rem 2rem;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  background: white;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+.serviceIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #161B52 0%, #1e3a5f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 1.5rem;
+}
+
+.serviceTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #161B52;
+  margin: 0 0 1rem 0;
+}
+
+.serviceDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Why Choose Section */
+.whyChooseSection {
+  padding: 6rem 0;
+  background: white;
+}
+
+.whyChooseContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whyChooseHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #161B52;
+  margin-bottom: 1rem;
+}
+
+.whyChooseIntro {
+  font-size: 1.125rem;
+  color: #4a5568;
+  margin: 0;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.featureCard {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  background: #f8f9fa;
+  border-color: #161B52;
+}
+
+.featureIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #161B52 0%, #1e3a5f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 1.5rem;
+}
+
+.featureTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #161B52;
+  margin: 0 0 0.5rem 0;
+}
+
+.featureDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Coverage Section */
+.coverageSection {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #161B52 0%, #1e3a5f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.coverageBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/logistics.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.coverageContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.coverageText {
+  animation: fadeInLeft 0.8s ease-out;
+  color: white;
+}
+
+.coverageTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.coverageDescription {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.statsBoxes {
+  display: flex;
+  gap: 2rem;
+  animation: fadeInRight 0.8s ease-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.statBox {
+  background: transparent;
+  border: 2px solid white;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.statBox:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.statNumber {
+  display: block;
+  font-family: 'Barlow', 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Vision & Mission Section */
+.visionMissionSection {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #161B52 0%, #1e3a5f 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallaxBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/logistics.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.visionMissionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.visionContent,
+.missionContent {
+  text-align: left;
+}
+
+.missionSingleGrid {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.missionSingleGrid .missionContent {
+  text-align: center;
+  max-width: 800px;
+}
+
+.statementText {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+/* Clients Section */
+.clientsSection {
+  padding: 6rem 0;
+  background: white;
+}
+
+.clientsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.clientsIntro {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 1rem 0 0 0;
+}
+
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clientCard {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.clientCard:hover {
+  opacity: 1;
+  background: #f8f9fa;
+  border-color: #161B52;
+}
+
+.clientLogo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #161B52 0%, #1e3a5f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+}
+
+.clientName {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* CTA Section */
+.ctaSection {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ctaBackground {
+  background-image: url('/footer.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(22, 27, 82, 0.9) 0%, rgba(30, 58, 95, 0.9) 100%);
+  z-index: 1;
+}
+
+.ctaContent {
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;
+}
+
+.ctaTitle {
+  font-family: 'Barlow', 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.ctaSubtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 2rem 0;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: white;
+  color: #161B52;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .clientsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .partnersGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .coverageContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .statsBoxes {
+    flex-direction: column;
+  }
+  
+  .visionMissionGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .statementText {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .clientsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .introSection {
+    padding: 6rem 0;
+  }
+  
+  .introText {
+    font-size: 1rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .serviceCard {
+    padding: 2rem;
+  }
+  
+  .partnerLogos {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .featureCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .featureNumber {
+    font-size: 2rem;
+  }
+  
+  .visionMissionSection {
+    padding: 6rem 0;
+  }
+  
+  .statementText {
+    font-size: 1.125rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2rem;
+  }
+  
+  .ctaSubtitle {
+    font-size: 1rem;
+  }
+}
