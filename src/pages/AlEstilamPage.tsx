@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from 'react';
 import PageHeader from '../components/PageHeader';
 import styles from './AlEstilamPage.module.css';
 
-const CountUpNumber = ({ end, duration = 2000 }) => {
+const CountUpNumber = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,8 +33,8 @@ const CountUpNumber = ({ end, duration = 2000 }) => {
   useEffect(() => {
     if (!isVisible) return;
 
-    let startTime = null;
-    const animate = (currentTime) => {
+    let startTime: number | null = null;
+    const animate = (currentTime: number) => {
       if (startTime === null) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       

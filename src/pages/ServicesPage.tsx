@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import styles from './ServicesPage.module.css';
@@ -33,52 +32,6 @@ const ServicesPage = () => {
   const handleNavClick = (index: number) => {
     setCurrentSlide(index);
   };
-  const services = [
-    {
-      title: "Market Entry Strategy",
-      description: "Navigate Iraq's complex business landscape with confidence. Our deep local knowledge and established networks ensure smooth market entry and sustainable growth.",
-      features: [
-        "Regulatory compliance guidance",
-        "Local partnership facilitation", 
-        "Market analysis and insights",
-        "Risk assessment and mitigation"
-      ],
-      image: "/logistics.jpg"
-    },
-    {
-      title: "Operational Support",
-      description: "From logistics to legal compliance, we provide end-to-end operational support that keeps your business running smoothly in challenging environments.",
-      features: [
-        "Supply chain management",
-        "Legal and regulatory support",
-        "HR and recruitment services",
-        "Office setup and facilities"
-      ],
-      image: "/oil-gas.jpg"
-    },
-    {
-      title: "Investment Advisory",
-      description: "Identify and capitalize on Iraq's most promising investment opportunities with our strategic advisory services and sector expertise.",
-      features: [
-        "Sector analysis and opportunities",
-        "Due diligence support",
-        "Investment structuring",
-        "Exit strategy planning"
-      ],
-      image: "/automotive.jpg"
-    },
-    {
-      title: "Government Relations",
-      description: "Navigate government procedures and build strategic relationships with key stakeholders through our established government relations network.",
-      features: [
-        "Licensing and permits",
-        "Government liaison services",
-        "Policy advocacy",
-        "Public-private partnerships"
-      ],
-      image: "/banner.jpg"
-    }
-  ];
 
   return (
     <div className={styles.servicesPage}>
