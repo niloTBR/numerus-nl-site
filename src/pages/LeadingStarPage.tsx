@@ -1,8 +1,8 @@
-import { ArrowRight, Package, Globe, Truck, Clock, Shield, Award } from 'lucide-react';
+import { ArrowRight, Car, Wrench, Users, Clock, Shield, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import PageHeader from '../components/PageHeader';
-import styles from './AlEstilamPage.module.css';
+import styles from './LeadingStarPage.module.css';
 
 const CountUpNumber = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -51,103 +51,95 @@ const CountUpNumber = ({ end, duration = 2000 }) => {
   return <span ref={ref}>{count}</span>;
 };
 
-const AlEstilamPage = () => {
+const LeadingStarPage = () => {
   const services = [
     {
-      icon: Package,
-      title: 'Packing Services',
-      description: 'Professional packing solutions ensuring safe transport of all goods'
+      icon: Car,
+      title: 'Commercial Vehicles',
+      description: 'Daimler Mercedes Benz trucks, buses, and vans distribution'
     },
     {
-      icon: Globe,
-      title: 'Global Express',
-      description: 'International import/export services with FedEx and TNT'
+      icon: Wrench,
+      title: 'After Sales Service',
+      description: 'World-class facilities and service in accordance with Daimler standards'
     },
     {
-      icon: Truck,
-      title: 'Domestic Express',
-      description: 'Nationwide delivery network covering all Iraqi provinces'
+      icon: Users,
+      title: 'Dealership Network',
+      description: 'Comprehensive coverage across Iraq and Kurdistan region'
     }
   ];
 
   const features = [
     {
       icon: Clock,
-      title: 'Fastest Delivery',
-      description: 'Time-definite deliveries with real-time tracking'
+      title: 'Established Presence',
+      description: 'Showroom and service center in Erbil since 2014'
     },
     {
       icon: Shield,
-      title: 'Secure Handling',
-      description: 'Advanced security protocols for all shipments'
+      title: 'Daimler Partnership',
+      description: 'Joint venture with Numerus and Gargash UAE'
     },
     {
       icon: Award,
-      title: 'Proven Excellence',
-      description: '20+ years of logistics expertise in Iraq'
+      title: 'Global Standards',
+      description: 'Meeting Daimler\'s international requirements'
     }
   ];
 
   const clients = [
-    'Shell',
-    'BP',
-    'ExxonMobil',
-    'Halliburton',
-    'Schlumberger',
-    'Baker Hughes',
-    'Weatherford',
-    'Petrofac',
-    'KBR',
-    'Bechtel',
-    'UNDP',
-    'WHO',
-    'Iraqi Ministry of Oil',
-    'Iraqi Ministry of Health',
-    'Carrefour',
-    'Caterpillar'
+    'Iraqi Government',
+    'Kurdistan Regional Government',
+    'Oil Companies',
+    'Construction Firms',
+    'Logistics Companies',
+    'Transportation Services',
+    'Public Transport',
+    'Private Enterprises'
   ];
 
   return (
-    <div className={styles.alEstilamPage}>
+    <div className={styles.leadingStarPage}>
       <PageHeader 
-        title="Logistics" 
-        subtitle="Al-Estilam Express Cargo Company"
+        title="Automotive" 
+        subtitle="Leading Star Automotive Co."
       />
       
       {/* Introduction Section */}
       <section className={styles.introSection}>
         <div className="container">
           <div className={styles.introContent}>
-            <h2 className={styles.sectionTitle}>ABOUT AL-ESTILAM</h2>
+            <h2 className={styles.sectionTitle}>ABOUT LEADING STAR</h2>
             <p className={styles.introText}>
-              Taqadum Al Iraq Express (Al-Estilam Express Cargo Company) was established in 2000 as a 
-              pioneer in the express cargo and logistics sector in Iraq. As the exclusive partner of 
-              FedEx and TNT in Iraq, we provide comprehensive logistics solutions that bridge international 
-              excellence with local expertise, ensuring reliable delivery services across the nation and beyond.
+              Leading Star Automotive Co., a joint venture between Numerus and Gargash (UAE), 
+              has been awarded the Iraq-Kurdistan region dealership for Daimler Mercedes Benz 
+              commercial vehicles including Trucks (Actros), Busses (Sprinter) and Vans (V-Class and Viano). 
+              We provide world-class facilities and after sales services in accordance with Daimler's 
+              global requirements in Iraq.
             </p>
           </div>
           
           {/* Partnership Section */}
           <div className={styles.partnershipHeader}>
-            <h2 className={styles.sectionTitle}>EXCLUSIVE PARTNERS IN IRAQ</h2>
+            <h2 className={styles.sectionTitle}>EXCLUSIVE DEALERSHIP</h2>
           </div>
           <div className={styles.partnersGrid}>
             <div className={styles.partnerCard}>
               <div className={styles.partnerLogoWrapper}>
-                <span className={styles.partnerLogo}>FedEx</span>
+                <span className={styles.partnerLogo}>Mercedes-Benz</span>
               </div>
-              <p className={styles.partnerLabel}>Global Express</p>
+              <p className={styles.partnerLabel}>Commercial Vehicles</p>
             </div>
             <div className={styles.partnerCard}>
               <div className={styles.partnerLogoWrapper}>
-                <span className={styles.partnerLogo}>TNT</span>
+                <span className={styles.partnerLogo}>Daimler</span>
               </div>
-              <p className={styles.partnerLabel}>International Delivery</p>
+              <p className={styles.partnerLabel}>Global Partnership</p>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* Services Section */}
       <section className={styles.servicesSection}>
@@ -177,7 +169,7 @@ const AlEstilamPage = () => {
         <div className="container">
           <div className={styles.whyChooseContent}>
             <div className={styles.whyChooseHeader}>
-              <h2 className={styles.sectionTitle}>WHY CHOOSE AL-ESTILAM</h2>
+              <h2 className={styles.sectionTitle}>WHY CHOOSE LEADING STAR</h2>
             </div>
             <div className={styles.featuresGrid}>
               {features.map((feature, index) => {
@@ -203,24 +195,24 @@ const AlEstilamPage = () => {
         <div className="container">
           <div className={styles.coverageContent}>
             <div className={styles.coverageText}>
-              <h2 className={styles.coverageTitle}>NATIONWIDE COVERAGE</h2>
+              <h2 className={styles.coverageTitle}>MARKET PRESENCE</h2>
               <p className={styles.coverageDescription}>
-                Our extensive network covers all 18 Iraqi provinces with multiple distribution centers 
-                strategically located in Baghdad, Basra, and Erbil.
+                Leading Star has established a strong presence in the Iraq-Kurdistan region with 
+                an interim showroom and services centre in Erbil launched during the third quarter of 2014.
               </p>
             </div>
             <div className={styles.statsBoxes}>
               <div className={styles.statBox}>
-                <span className={styles.statNumber}><CountUpNumber end={18} /></span>
-                <span className={styles.statLabel}>Provinces</span>
+                <span className={styles.statNumber}><CountUpNumber end={2014} /></span>
+                <span className={styles.statLabel}>Established</span>
               </div>
               <div className={styles.statBox}>
-                <span className={styles.statNumber}><CountUpNumber end={100} />+</span>
-                <span className={styles.statLabel}>Vehicles</span>
+                <span className={styles.statNumber}><CountUpNumber end={2} /></span>
+                <span className={styles.statLabel}>Regions</span>
               </div>
               <div className={styles.statBox}>
-                <span className={styles.statNumber}><CountUpNumber end={300} />+</span>
-                <span className={styles.statLabel}>Employees</span>
+                <span className={styles.statNumber}><CountUpNumber end={4} /></span>
+                <span className={styles.statLabel}>Vehicle Types</span>
               </div>
             </div>
           </div>
@@ -253,4 +245,4 @@ const AlEstilamPage = () => {
   );
 };
 
-export default AlEstilamPage;
+export default LeadingStarPage;
