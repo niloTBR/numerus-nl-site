@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './SectorsBanner.module.css';
 
 const SectorsBanner = () => {
-  const [hoveredSector, setHoveredSector] = useState<string | null>(null);
+  const [hoveredSector, setHoveredSector] = useState<string | null>('logistics');
 
   const sectors = [
     {
